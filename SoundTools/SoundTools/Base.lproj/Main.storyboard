@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h3R-Bg-6l4">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Delay Calculator-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SoundTools" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Salle" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dzk-pW-FD4">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Capacité" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f0L-MP-hpX">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="QPU-td-6aC"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Température" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ran-2v-QhD">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFM-PU-mt2">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="S1K-d2-fnz"/>
+                                    <constraint firstAttribute="height" constant="30" id="fM2-dh-lIJ"/>
+                                </constraints>
+                                <state key="normal" image="LocateMeIcon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cic-dc-ooP">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="mY5-7u-5RY"/>
+                                    <constraint firstAttribute="width" constant="30" id="x9A-fl-XWq"/>
+                                </constraints>
+                                <state key="normal" image="TakeAPictureIcon"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Redacteur" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l86-I0-5nQ">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28113278020804627" green="0.27964530518049047" blue="0.28262025523560208" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="0.51350473223912141" blue="0.064764212958854595" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="DFM-PU-mt2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1Ua-u6-AAf"/>
+                            <constraint firstItem="DFM-PU-mt2" firstAttribute="leading" secondItem="f0L-MP-hpX" secondAttribute="trailing" constant="10" id="CSe-7R-sOg"/>
+                            <constraint firstItem="ran-2v-QhD" firstAttribute="trailing" secondItem="f0L-MP-hpX" secondAttribute="trailing" id="KLn-fC-dK9"/>
+                            <constraint firstItem="f0L-MP-hpX" firstAttribute="leading" secondItem="Dzk-pW-FD4" secondAttribute="trailing" constant="10" id="Khd-Dv-6Pp"/>
+                            <constraint firstItem="Cic-dc-ooP" firstAttribute="top" secondItem="DFM-PU-mt2" secondAttribute="bottom" constant="10" id="Q3G-mc-y01"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cic-dc-ooP" secondAttribute="trailing" id="RbE-jh-8KI"/>
+                            <constraint firstItem="ran-2v-QhD" firstAttribute="leading" secondItem="l86-I0-5nQ" secondAttribute="trailing" constant="10" id="TqW-SN-TTP"/>
+                            <constraint firstItem="ran-2v-QhD" firstAttribute="top" secondItem="f0L-MP-hpX" secondAttribute="bottom" constant="10" id="XTH-jP-YP3"/>
+                            <constraint firstItem="Dzk-pW-FD4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YT1-zk-O5F"/>
+                            <constraint firstItem="DFM-PU-mt2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="f2W-fL-bYe"/>
+                            <constraint firstItem="f0L-MP-hpX" firstAttribute="baseline" secondItem="Dzk-pW-FD4" secondAttribute="baseline" id="ouz-Wy-Joy"/>
+                            <constraint firstItem="Dzk-pW-FD4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="qcP-uR-tHZ"/>
+                            <constraint firstItem="l86-I0-5nQ" firstAttribute="top" secondItem="Dzk-pW-FD4" secondAttribute="bottom" constant="10" id="sYt-g2-3zs"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="l86-I0-5nQ" secondAttribute="leading" id="vda-DQ-BC4"/>
+                            <constraint firstItem="ran-2v-QhD" firstAttribute="width" secondItem="f0L-MP-hpX" secondAttribute="width" id="w9L-1m-gYN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Delay Calculator" id="GmA-5A-ES0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Bpg-oc-cy3">
+                            <color key="tintColor" red="1" green="0.51350473220000004" blue="0.064764212959999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EfO-qy-7KQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h3R-Bg-6l4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qIQ-zD-Q0q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LFM-8A-8aV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbE-y4-vox" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-46" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LocateMeIcon" width="50" height="50"/>
+        <image name="TakeAPictureIcon" width="50" height="50"/>
+    </resources>
+</document>
