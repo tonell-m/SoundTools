@@ -22,8 +22,12 @@ class ViewController: UIViewController {
     //Footer
     @IBOutlet weak var toolsDelayTextField: UITextField!
     @IBOutlet weak var toolsDistanceTextField: UITextField!
-    @IBOutlet weak var frequencyTextField: UITextField!
-    @IBOutlet weak var waveLengthTextField: UITextField!
+    @IBOutlet weak var toolsWaveLengthTextField: UITextField!
+    @IBOutlet weak var toolsFrequencyTextField: UITextField!
+    @IBOutlet weak var toolsPeriodTextField: UITextField!
+    @IBOutlet weak var toolsTemperatureTextField: UITextField!
+    
+    
     
     //Numpad toolBar
     let numpadToolBar = UIToolbar()
@@ -38,18 +42,7 @@ class ViewController: UIViewController {
         
         
         //Add a "Done" button to numpad keyboard
-        numpadToolBar.barStyle = UIBarStyle.blackTranslucent
-        numpadToolBar.items = [
-            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil),
-            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(ViewController.hideKeyboard))
-        ]
-        numpadToolBar.sizeToFit()
-        toolsDistanceTextField.inputAccessoryView = numpadToolBar
-        roomCapacityTextField.inputAccessoryView = numpadToolBar
-        temperatureTextField.inputAccessoryView = numpadToolBar
-        toolsDelayTextField.inputAccessoryView = numpadToolBar
-        waveLengthTextField.inputAccessoryView = numpadToolBar
-        frequencyTextField.inputAccessoryView = numpadToolBar
+        initNumericKeyboard()
     }
 
     override func didReceiveMemoryWarning() {
@@ -81,6 +74,28 @@ class ViewController: UIViewController {
     func hideKeyboard() {
         self.view.frame.origin.y = 0
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+    
+    func initNumericKeyboard() {
+        
+        numpadToolBar.barStyle = UIBarStyle.blackTranslucent
+        
+        numpadToolBar.items = [
+            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil),
+            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(ViewController.hideKeyboard))
+        ]
+        
+        numpadToolBar.sizeToFit()
+        
+        roomCapacityTextField.inputAccessoryView = numpadToolBar
+        temperatureTextField.inputAccessoryView = numpadToolBar
+        
+        toolsDelayTextField.inputAccessoryView = numpadToolBar
+        toolsWaveLengthTextField.inputAccessoryView = numpadToolBar
+        toolsFrequencyTextField.inputAccessoryView = numpadToolBar
+        toolsDistanceTextField.inputAccessoryView = numpadToolBar
+        toolsTemperatureTextField.inputAccessoryView = numpadToolBar
+        toolsPeriodTextField.inputAccessoryView = numpadToolBar
     }
 
 }
